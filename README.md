@@ -121,21 +121,6 @@ The system can identify **10 pharmaceutical drugs** commonly available in the Ph
 - **CAUTION**: Can take with monitoring/precautions
 - **CONSULT_DOCTOR**: Seek medical consultation
 
-## 📊 Example Output
-
-```json
-{
-  "status": "SAFE",
-  "drug_match": "Biogesic",
-  "confidence": 0.9999,
-  "recommendation": "SAFE TO TAKE",
-  "reasoning": "Appropriate timing and no contraindications found",
-  "risk_level": "LOW",
-  "instructions": "Take with water after meals",
-  "patient_verification": true
-}
-```
-
 ## 🎯 Key Features
 
 ### 🤖 YOLO Model
@@ -231,4 +216,4 @@ For issues or questions:
 
 **Built with**: YOLOv8, PyTorch, OpenAI GPT-4o mini, Python  
 **Focused on**: Philippine pharmaceutical market  
-**Last Updated**: June 2024
+**Last Updated**: June 2025
