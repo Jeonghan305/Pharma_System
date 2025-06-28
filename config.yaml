@@ -1,0 +1,95 @@
+# Pharmaceutical Drug Safety Assessment System Configuration
+# Configure paths, patient data, and assessment parameters
+
+# =============================================================================
+# DATA SOURCES
+# =============================================================================
+patient_data:
+  # Path to the simplified JSON patient database
+  database_path: "/home/ubuntu/pharma_system/patient_data/patient_data.json"
+  
+# YOLO Model Configuration  
+yolo_model:
+  # Path to trained model weights
+  model_path: "/home/ubuntu/pharma_system/yolo_model/models/trained/best_pharma_yolov8.pt"
+  # Confidence threshold for predictions
+  confidence_threshold: 0.7
+  
+# GPT Assessment Configuration
+gpt_assessment:
+  # OpenAI API settings
+  # api_key: ""  # 🔑 REPLACE WITH YOUR ACTUAL OPENAI API KEY
+  model: "gpt-4o-mini"
+  temperature: 0.1
+  max_tokens: 500
+  # Note: Environment variable OPENAI_API_KEY will override this setting if set
+
+# =============================================================================
+# ASSESSMENT SCENARIO - CONFIGURE YOUR TEST CASE HERE
+# =============================================================================
+assessment:
+  # Path to the medication image to analyze
+  image_path: "/home/ubuntu/pharma_system/yolo_model/data/test/Bactidol/00000202.jpg"
+  
+  # Patient ID from the database (P001, P002, or P003)
+  patient_id: "patient-003"
+  
+# =============================================================================
+# DRUG CLASSES (YOLO Model Detection Classes)
+# =============================================================================
+drug_classes:
+  - "Acetaminophen"       # Pain reliever/fever reducer
+  - "Aspirin"            # Pain reliever/anti-inflammatory  
+  - "Ibuprofen"          # NSAID pain reliever
+  - "Diphenhydramine"    # Antihistamine
+  - "Loratadine"         # Non-drowsy antihistamine
+  - "Omeprazole"         # Proton pump inhibitor
+  - "Simvastatin"        # Cholesterol medication
+  - "Metformin"          # Diabetes medication
+  - "Lisinopril"         # Blood pressure medication
+  - "Levothyroxine"      # Thyroid hormone
+  
+# =============================================================================
+# OUTPUT CONFIGURATION
+# =============================================================================
+output:
+  # Directory for assessment reports
+  reports_directory: "outputs/assessments/"
+  
+  # Report filename format (timestamp will be added)
+  report_filename_prefix: "medication_assessment"
+  
+  # Enable detailed console output
+  verbose: true
+
+# =============================================================================
+# AVAILABLE OPTIONS (Reference)
+# =============================================================================
+available_patients:
+  - id: "patient-001"
+    name: "Maria Santos"
+    age: 65
+    medications: ["Biogesic", "Fish Oil"]
+    
+  - id: "patient-002" 
+    name: "John Cruz"
+    age: 42
+    medications: ["Bioflu", "Neozep", "DayZinc"]
+    
+  - id: "patient-003"
+    name: "Sarah Lopez"
+    age: 28
+    medications: ["Alaxan", "Medicol", "Bactidol", "Decolgen"]
+
+available_drugs:
+  # From your trained YOLO model
+  - "Alaxan"
+  - "Bactidol" 
+  - "Biogesic"
+  - "Bioflu"
+  - "DayZinc"
+  - "Decolgen"
+  - "Fish Oil"
+  - "Kremil S"
+  - "Medicol"
+  - "Neozep" 

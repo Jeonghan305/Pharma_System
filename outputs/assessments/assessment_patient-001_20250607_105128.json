@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "20250607_105128",
+    "scenario_name": "Pharmaceutical Safety Assessment",
+    "notes": "Configuration-driven assessment",
+    "config_file": "config.yaml"
+  },
+  "input": {
+    "image_path": "/home/ubuntu/pharma_system/yolo_model/data/test/Bactidol/00000202.jpg",
+    "patient_id": "patient-001",
+    "expected_drug": "Unknown"
+  },
+  "patient_data": {
+    "id": "patient-001",
+    "name": "Maria Santos",
+    "age": 65,
+    "medications": [
+      {
+        "drug": "Biogesic",
+        "date": "2024-06-01",
+        "time": "08:00",
+        "notes": "For headache"
+      },
+      {
+        "drug": "Fish Oil",
+        "date": "2024-06-01",
+        "time": "19:00",
+        "notes": "Daily supplement"
+      },
+      {
+        "drug": "Biogesic",
+        "date": "2024-06-02",
+        "time": "14:30",
+        "notes": "Back pain"
+      },
+      {
+        "drug": "Fish Oil",
+        "date": "2024-06-02",
+        "time": "19:00",
+        "notes": "Daily supplement"
+      }
+    ]
+  },
+  "yolo_results": {
+    "predicted_drug": "Bactidol",
+    "confidence": 0.9999979734420776,
+    "model_path": "/home/ubuntu/pharma_system/yolo_model/models/trained/best_pharma_yolov8.pt",
+    "threshold": 0.7
+  },
+  "gpt_assessment": {
+    "patient_takes_medication": false,
+    "last_taken": null,
+    "hours_since_last_dose": null,
+    "action": "PATIENT_DOESNT_TAKE",
+    "reasoning": "Patient has no record of taking Bactidol.",
+    "wait_time_remaining": null,
+    "metadata": {
+      "model_used": "gpt-4o-mini",
+      "analysis_timestamp": "2025-06-07T10:51:28.321376",
+      "assessment_type": "timing_only"
+    }
+  },
+  "verification": {
+    "prediction_matches_expected": false,
+    "patient_takes_this_drug": false
+  }
+}

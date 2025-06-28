@@ -1,0 +1,249 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# API Keys and Environment Variables
+*.env
+.env.*
+config_local.py
+secrets.txt
+api_keys.txt
+
+# Model Files (usually large)
+yolo_model/models/trained/*.pt
+yolo_model/models/trained/*.pth
+yolo_model/models/trained/*.onnx
+yolo_model/models/pretrained/*.pt
+yolo_model/models/pretrained/*.pth
+*.weights
+*.pkl
+*.joblib
+
+# Dataset Files (usually large)
+yolo_model/data/train/
+yolo_model/data/val/
+yolo_model/data/test/
+yolo_model/data/*.zip
+yolo_model/data/*.tar.gz
+yolo_model/data/*.rar
+dataset/
+datasets/
+
+# Cache Files
+yolo_model/data/*.cache
+*.cache
+
+# Training Outputs and Logs
+yolo_model/outputs/runs/
+yolo_model/outputs/logs/*.log
+yolo_model/outputs/logs/*.txt
+yolo_model/outputs/plots/*.png
+yolo_model/outputs/plots/*.jpg
+yolo_model/outputs/plots/*.pdf
+yolo_model/outputs/reports/*.html
+yolo_model/outputs/reports/*.pdf
+yolo_model/outputs/reports/*.txt
+
+# Assessment Outputs (ignore large/sensitive files, keep samples)
+outputs/assessments/*_sensitive.json
+outputs/assessments/*_real_patient*.json
+outputs/assessments/*_production*.json
+outputs/assessments/*.log
+
+# Patient Data (sensitive)
+patient_data/patients.db
+patient_data/patient_data_real.json
+patient_data/*_sensitive.json
+patient_data/backups/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.temp
+*.log
+*.bak
+*.backup
+
+# Wandb (Weights & Biases) tracking
+wandb/
+
+# MLflow tracking
+mlruns/
+
+# TensorBoard logs
+runs/
+logs/
+tensorboard_logs/
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Documentation build
+docs/build/
+docs/_build/
+
+# Configuration files with sensitive data
+config_local.yaml
+config_prod.yaml
+*_secrets.yaml
+
+# Python virtual environment
+pharma_env/
+pharma_venv/ 

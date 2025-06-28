@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "timestamp": "20250607_101727",
+    "scenario_name": "Pharmaceutical Safety Assessment",
+    "notes": "Configuration-driven assessment",
+    "config_file": "config.yaml"
+  },
+  "input": {
+    "image_path": "/home/ubuntu/pharma_system/yolo_model/data/test/Bactidol/00000202.jpg",
+    "patient_id": "patient-001",
+    "expected_drug": "Unknown"
+  },
+  "patient_data": {
+    "id": "patient-001",
+    "name": "Maria Santos",
+    "age": 65,
+    "medications": [
+      {
+        "drug": "Biogesic",
+        "date": "2024-06-01",
+        "time": "08:00",
+        "notes": "For headache"
+      },
+      {
+        "drug": "Fish Oil",
+        "date": "2024-06-01",
+        "time": "19:00",
+        "notes": "Daily supplement"
+      },
+      {
+        "drug": "Biogesic",
+        "date": "2024-06-02",
+        "time": "14:30",
+        "notes": "Back pain"
+      },
+      {
+        "drug": "Fish Oil",
+        "date": "2024-06-02",
+        "time": "19:00",
+        "notes": "Daily supplement"
+      }
+    ]
+  },
+  "yolo_results": {
+    "predicted_drug": "Bactidol",
+    "confidence": 0.9999979734420776,
+    "model_path": "/home/ubuntu/pharma_system/yolo_model/models/trained/best_pharma_yolov8.pt",
+    "threshold": 0.7
+  },
+  "gpt_assessment": {
+    "status": "partial_analysis",
+    "raw_gpt_response": "```json\n{\n    \"environment_assessment\": {\n        \"cleanliness_rating\": \"FAIR\",\n        \"environment_details\": \"The medication appears to be on a wooden surface, which may not be sterile. There are no visible signs of contamination, but the surface may harbor bacteria.\",\n        \"contamination_risks\": \"Potential for contamination from the wooden surface.\"\n    },\n    \"timing_assessment\": {\n        \"timing_status\": \"UNKNOWN\", \n        \"timing_details\": \"No specific timing information provided for when the medication should be taken.\",\n        \"next_dose_recommendation\": \"Consult with a healthcare provider for specific timing.\"\n    },\n    \"drug_safety\": {\n        \"safety_level\": \"SAFE\",\n        \"interaction_risks\": \"No current medications reported, so minimal interaction risks.\",\n        \"age_considerations\": \"At 65 years old, the patient should be monitored for any age-related sensitivities.\"\n    },\n    \"final_recommendation\": {\n        \"action\": \"WAIT\",\n        \"reasoning\": \"The environment is not optimal for medication consumption due to potential contamination risks.\",\n        \"instructions\": \"Ensure the medication is taken in a clean environment. Consult a healthcare provider for timing and further instructions.\"\n    }\n}\n```",
+    "final_recommendation": {
+      "action": "CONSULT_DOCTOR",
+      "reasoning": "AI analysis format error - manual review required",
+      "instructions": "Please consult healthcare provider before taking medication"
+    },
+    "metadata": {
+      "model_used": "gpt-4o-mini",
+      "analysis_timestamp": "2025-06-07T10:17:27.243316",
+      "error": "JSON parsing failed"
+    }
+  },
+  "verification": {
+    "prediction_matches_expected": false,
+    "patient_takes_this_drug": false
+  }
+}

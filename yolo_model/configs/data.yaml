@@ -1,0 +1,21 @@
+# Pharmaceutical Drug Classification Dataset
+path: /home/ubuntu/pharma_system/yolo_model/data
+train: train
+val: val
+test: test
+
+# Number of classes
+nc: 10
+
+# Class names
+names:
+  0: Alaxan
+  1: Bactidol
+  2: Bioflu
+  3: Biogesic
+  4: DayZinc
+  5: Decolgen
+  6: Fish Oil
+  7: Kremil S
+  8: Medicol
+  9: Neozep

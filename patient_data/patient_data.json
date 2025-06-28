@@ -1,0 +1,46 @@
+{
+  "patients": [
+    {
+      "id": "patient-001",
+      "name": "Maria Santos",
+      "age": 65,
+      "medications": [
+        {"drug": "Biogesic", "date": "2024-06-01", "time": "08:00", "notes": "For headache"},
+        {"drug": "Fish Oil", "date": "2024-06-01", "time": "19:00", "notes": "Daily supplement"},
+        {"drug": "Biogesic", "date": "2024-06-02", "time": "14:30", "notes": "Back pain"},
+        {"drug": "Fish Oil", "date": "2024-06-02", "time": "19:00", "notes": "Daily supplement"}
+      ]
+    },
+    {
+      "id": "patient-002", 
+      "name": "John Cruz",
+      "age": 42,
+      "medications": [
+        {"drug": "Bioflu", "date": "2024-06-01", "time": "09:15", "notes": "Cold symptoms"},
+        {"drug": "Neozep", "date": "2024-06-01", "time": "21:00", "notes": "Runny nose"},
+        {"drug": "Bioflu", "date": "2024-06-02", "time": "09:00", "notes": "Still feeling sick"},
+        {"drug": "DayZinc", "date": "2024-06-02", "time": "12:00", "notes": "Immune support"}
+      ]
+    },
+    {
+      "id": "patient-003",
+      "name": "Sarah Lopez", 
+      "age": 28,
+      "medications": [
+        {"drug": "Alaxan", "date": "2024-06-01", "time": "16:45", "notes": "Muscle pain from gym"},
+        {"drug": "Medicol", "date": "2024-06-02", "time": "08:30", "notes": "Period cramps"},
+        {"drug": "Bactidol", "date": "2024-06-02", "time": "20:00", "notes": "Sore throat"},
+        {"drug": "Decolgen", "date": "2024-06-03", "time": "07:00", "notes": "Congestion"}
+      ]
+    }
+  ],
+  "metadata": {
+    "created_at": "2024-06-01T10:00:00",
+    "last_updated": "2024-06-07T08:22:15",
+    "version": "1.0",
+    "description": "Sample pharmaceutical patient data for drug safety assessment system",
+    "total_patients": 3,
+    "total_medications": 5,
+    "total_doses_recorded": 6
+  }
+} 

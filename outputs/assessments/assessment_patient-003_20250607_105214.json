@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "timestamp": "20250607_105214",
+    "scenario_name": "Pharmaceutical Safety Assessment",
+    "notes": "Configuration-driven assessment",
+    "config_file": "config.yaml"
+  },
+  "input": {
+    "image_path": "/home/ubuntu/pharma_system/yolo_model/data/test/Bactidol/00000202.jpg",
+    "patient_id": "patient-003",
+    "expected_drug": "Unknown"
+  },
+  "patient_data": {
+    "id": "patient-003",
+    "name": "Sarah Lopez",
+    "age": 28,
+    "medications": [
+      {
+        "drug": "Alaxan",
+        "date": "2024-06-01",
+        "time": "16:45",
+        "notes": "Muscle pain from gym"
+      },
+      {
+        "drug": "Medicol",
+        "date": "2024-06-02",
+        "time": "08:30",
+        "notes": "Period cramps"
+      },
+      {
+        "drug": "Bactidol",
+        "date": "2024-06-02",
+        "time": "20:00",
+        "notes": "Sore throat"
+      },
+      {
+        "drug": "Decolgen",
+        "date": "2024-06-03",
+        "time": "07:00",
+        "notes": "Congestion"
+      }
+    ]
+  },
+  "yolo_results": {
+    "predicted_drug": "Bactidol",
+    "confidence": 0.9999979734420776,
+    "model_path": "/home/ubuntu/pharma_system/yolo_model/models/trained/best_pharma_yolov8.pt",
+    "threshold": 0.7
+  },
+  "gpt_assessment": {
+    "patient_takes_medication": true,
+    "last_taken": "2024-06-02 20:00",
+    "hours_since_last_dose": 100,
+    "action": "TAKE_NOW",
+    "reasoning": "It has been more than 8 hours since the last dose of Bactidol.",
+    "wait_time_remaining": null,
+    "metadata": {
+      "model_used": "gpt-4o-mini",
+      "analysis_timestamp": "2025-06-07T10:52:14.799657",
+      "assessment_type": "timing_only"
+    }
+  },
+  "verification": {
+    "prediction_matches_expected": false,
+    "patient_takes_this_drug": false
+  }
+}
